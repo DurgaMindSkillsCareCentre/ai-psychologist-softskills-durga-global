@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Durga Psychiatric Centre | Enterprise Cognitive Architecture & Executive Soft Skills</title>
+    <meta name="description" content="The premier non-clinical digital archive for behavioral strategy, workplace soft skills certification, marital alignment, and AI organizational diagnostics.">
+    
+    <!-- Premium Font Architecture -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-dark: #020617;
+            --bg-surface: #0f172a;
+            --bg-surface-elevated: #1e293b;
+            --primary-gold: #f59e0b;
+            --primary-gold-hover: #d97706;
+            --text-white: #ffffff;
+            --text-muted: #94a3b8;
+            --emerald-accent: #10b981;
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --font-main: 'Plus Jakarta Sans', -apple-system, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            font-family: var(--font-main);
+            line-height: 1.7;
+            padding-bottom: 60px;
+            overflow-x: hidden;
+        }
+
+        /* Top Executive Navigation Indicator Bar */
+        .executive-top-bar {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .brand-seal {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-white);
+        }
+
+        .brand-logo-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary-gold);
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
+        }
+
+        .brand-titles {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-title-main {
+            font-weight: 800;
+            font-size: 15px;
+            letter-spacing: 0.3px;
+            color: var(--text-white);
+            line-height: 1.2;
+        }
+
+        .brand-title-sub {
+            font-size: 10px;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 2px;
+        }
+
+        .nav-cta-btn {
+            background: transparent;
+            border: 1px solid var(--primary-gold);
+            color: var(--primary-gold);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-cta-btn:hover {
+            background: var(--primary-gold);
+            color: var(--bg-dark);
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+        }
+
+        /* Hero Showcase Section */
+        .hero-section {
+            padding: 60px 20px 40px 20px;
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .hero-badge {
+            background: linear-gradient(90deg, rgba(245, 158, 11, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%);
+            border: 1px solid var(--glass-border);
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--primary-gold);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+
+        .hero-section h1 {
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.25;
+            letter-spacing: -1.5px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-section p {
+            font-size: 17px;
+            color: var(--text-muted);
+            max-width: 750px;
+            margin: 0 auto 35px auto;
+            line-height: 1.6;
+        }
+
+        /* Premium Credentials Profile Board */
+        .credentials-card {
+            background: linear-gradient(145deg, rgba(15, 23, 42, 0.6) 0%, rgba(30, 41, 59, 0.4) 100%);
+            border: 1px solid var(--glass-border);
+            border-left: 4px solid var(--primary-gold);
+            border-radius: 16px;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+            padding: 24px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .credentials-icon-wrap {
+            background: rgba(245, 158, 11, 0.1);
+            padding: 12px;
+            border-radius: 12px;
+            color: var(--primary-gold);
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .credentials-text h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-white);
+            margin-bottom: 4px;
+        }
+
+        .credentials-text p {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Interactive Counter/Stats Ribbon */
+        .stats-ribbon {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto 50px auto;
+            background: var(--bg-surface);
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .stat-item h3 {
+            font-size: 22px;
+            color: var(--primary-gold);
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .stat-item p {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        /* Main Dynamic Post Content Grid */
+        .grid-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .grid-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 15px;
+        }
+
+        .grid-header h2 {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .grid-header h2 span {
+            color: var(--primary-gold);
+        }
+
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+            gap: 25px;
+        }
+
+        /* Award-Winning Card Architecture */
+        .award-card {
+            background-color: var(--bg-surface);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .award-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(245, 158, 11, 0.03) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .award-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(245, 158, 11, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .award-card:hover::before {
+            opacity: 1;
+        }
+
+        .card-tag {
+            align-self: flex-start;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            color: var(--text-muted);
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 19px;
+            font-weight: 700;
+            line-height: 1.4;
+            color: var(--text-white);
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-snippet {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 25px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-action-btn {
+            background-color: var(--bg-surface-elevated);
+            color: var(--text-white);
+            font-weight: 700;
+            font-size: 13px;
+            padding: 12px 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .award-card:hover .card-action-btn {
+            background-color: var(--primary-gold);
+            color: var(--bg-dark);
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2);
+        }
+
+        /* IMMERSIVE ULTRA WORLD-CLASS READER MODAL */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(2, 6, 23, 0.95);
+            backdrop-filter: blur(20px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-window {
+            background: var(--bg-surface);
+            border: 1px solid var(--glass-border);
+            width: 100%;
+            max-width: 850px;
+            max-height: 85vh;
+            border-radius: 24px;
+            padding: 40px;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-close-header {
+            position: sticky;
+            top: 0;
+            background: var(--bg-surface);
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--glass-border);
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .modal-close-btn {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid var(--primary-gold);
+            color: var(--primary-gold);
+            padding: 8px 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 12px;
+            text-transform: uppercase;
+            transition: all 0.2s ease;
+        }
+
+        .modal-close-btn:hover {
+            background: var(--primary-gold);
+            color: var(--bg-dark);
+        }
+
+        /* Elegant Blogger Content Sanitization Styling - FORCES FULL WIDTH */
+        .blog-full-body {
+            color: #cbd5e1;
+            line-height: 1.9;
+            font-size: 16px;
+            width: 100% !important;
+        }
+
+        /* Smashes bad inline formatting that causes the narrow white block from 1000287893.jpg */
+        .blog-full-body div, 
+        .blog-full-body p, 
+        .blog-full-body span, 
+        .blog-full-body table, 
+        .blog-full-body tbody, 
+        .blog-full-body tr, 
+        .blog-full-body td {
+            width: 100% !important;
+            max-width: 100% !important;
+            min-width: 100% !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            background: transparent !important;
+            background-color: transparent !important;
+            color: #cbd5e1 !important;
+            box-sizing: border-box !important;
+            display: block !important;
+        }
+
+        .blog-full-body p {
+            margin-bottom: 22px !important;
+        }
+
+        .blog-full-body img {
+            max-width: 100% !important;
+            height: auto !important;
+            border-radius: 14px;
+            margin: 20px 0;
+            border: 1px solid var(--glass-border);
+            display: block;
+        }
+
+        .blog-full-body a {
+            color: var(--primary-gold) !important;
+            text-decoration: underline !important;
+        }
+
+        /* Custom Scrollbar for Luxury Experience */
+        .modal-window::-webkit-scrollbar {
+            width: 6px;
+        }
+        .modal-window::-webkit-scrollbar-track {
+            background: var(--bg-dark);
+        }
+        .modal-window::-webkit-scrollbar-thumb {
+            background: var(--primary-gold);
+            border-radius: 4px;
+        }
+
+        /* Immersive Loading Screen Shimmer */
+        .shimmer-loader {
+            text-align: center;
+            padding: 80px 20px;
+            color: var(--primary-gold);
+            font-weight: 600;
+            font-size: 15px;
+            letter-spacing: 1px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(245, 158, 11, 0.1);
+            border-radius: 50%;
+            border-top-color: var(--primary-gold);
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* Master Authority Footer Directory */
+        .footer-hub {
+            max-width: 1200px;
+            margin: 80px auto 20px auto;
+            padding: 0 20px;
+        }
+
+        .directory-box {
+            background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-dark) 100%);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 45px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .directory-branding {
+            text-align: center;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 30px;
+            margin-bottom: 35px;
+        }
+
+        .directory-branding h2 {
+            color: var(--primary-gold);
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 6px;
+        }
+
+        .directory-branding p {
+            color: var(--text-muted);
+            font-size: 14px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .link-grid-stack {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .link-grid-stack { grid-template-columns: 1fr; }
+            .stats-ribbon { grid-template-columns: 1fr; gap: 15px; }
+            .hero-section h1 { font-size: 32px; }
+            .credentials-card { flex-direction: column; text-align: center; padding: 20px; }
+            .modal-overlay { padding: 8px; }
+            .modal-window { padding: 20px 15px; border-radius: 16px; max-height: 92vh; }
+        }
+
+        .link-element {
+            background-color: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--glass-border);
+            padding: 16px 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .link-element span {
+            color: var(--text-white);
+            font-weight: 600;
+            font-size: 14.5px;
+        }
+
+        .link-element .arrow-icon {
+            color: var(--text-muted);
+            font-weight: 700;
+            transition: transform 0.3s ease;
+        }
+
+        .link-element:hover {
+            background-color: var(--bg-surface-elevated);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .link-element:hover .arrow-icon {
+            color: var(--primary-gold);
+            transform: translateX(4px);
+        }
+
+        .master-element {
+            grid-column: 1 / -1;
+            background: linear-gradient(90deg, #1e1b4b 0%, #0f172a 100%);
+            border-left: 4px solid var(--emerald-accent);
+        }
+
+        .master-element span {
+            color: var(--emerald-accent);
+            font-weight: 700;
+        }
+
+        .seo-divider {
+            grid-column: 1 / -1;
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: 800;
+            color: var(--primary-gold);
+            letter-spacing: 1.5px;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        .geo-element {
+            background-color: transparent;
+            border: 1px dashed var(--glass-border);
+        }
+
+        .geo-element span {
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 13.5px;
+        }
+
+        .syndication-banner {
+            grid-column: 1 / -1;
+            border-left: 4px solid var(--primary-gold);
+            background: rgba(245, 158, 11, 0.02);
+        }
+
+        .syndication-banner span {
+            color: var(--primary-gold);
+        }
+
+        .final-copyright-seal {
+            text-align: center;
+            margin-top: 40px;
+            color: #475569;
+            font-size: 12px;
+            font-weight: 500;
+            border-top: 1px solid var(--glass-border);
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV BAR - WITH PROFILE PICTURE LOGO & VERIFIED DESIGNATION -->
+    <div class="executive-top-bar">
+        <a href="https://durga-mindskillscare.pages.dev/" target="_blank" class="brand-seal">
+            <img src="durga.jpg" alt="Durga Psychiatric Centre Logo" class="brand-logo-img">
+            <div class="brand-titles">
+                <span class="brand-title-main">Durga Psychiatric Centre</span>
+                <span class="brand-title-sub">Global Mindskills Matrix</span>
+            </div>
+        </a>
+        <a href="https://durga-mindskillscare.pages.dev/contact.html" target="_blank" class="nav-cta-btn">Initiate Audit</a>
+    </div>
+
+    <!-- HERO DISPLAY -->
+    <div class="hero-section">
+        <div class="hero-badge">Enterprise Search Authority Matrix</div>
+        <h1>AI Psychologist &amp; Executive Soft Skills Architecture</h1>
+        <p>The centralized framework directory of Durga Psychiatric Centre. Synchronizing global generative intelligence protocols with targeted preventative coaching, non-clinical wellness consulting, and leadership data mapping.</p>
+        
+        <!-- FULL CREDENTIALS BLOCK -->
+        <div class="credentials-card">
+            <div class="credentials-icon-wrap">📋</div>
+            <div class="credentials-text">
+                <h4>Executive Credentials &amp; Focus Spectrum</h4>
+                <p>Strategic Advisor &amp; Consultant overseeing multiple healthcare, foundation, and corporate coaching organizations. Specializing in international relationship dynamics, high-performance soft skills alignment, and advanced organizational behavioral architecture.</p>
+            </div>
+        </div>
+
+        <!-- COUNTER METRICS -->
+        <div class="stats-ribbon">
+            <div class="stat-item">
+                <h3>Live Feed</h3>
+                <p>Auto Syndication</p>
+            </div>
+            <div class="stat-item">
+                <h3>Non-Clinical</h3>
+                <p>Pure Advisory Scope</p>
+            </div>
+            <div class="stat-item">
+                <h3>Verified</h3>
+                <p>Google Stack Linkage</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- DYNAMIC CORE GRID -->
+    <div class="grid-wrapper">
+        <div class="grid-header">
+            <h2>Syndicated <span>Knowledge Modules</span></h2>
+        </div>
+
+        <div id="dynamic-posts-container">
+            <div class="shimmer-loader">
+                <div class="spinner"></div>
+                <div>SECURE DATA PIPELINE STREAMING FROM BLOGGER HUBS...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- IMMERSIVE INSIDE-THE-PAGE MODAL THEATRE READER (CORRECTED WIDTH FOR MOBILE) -->
+    <div id="premium-reader-modal" class="modal-overlay" onclick="closeFrameworkModal()">
+        <div class="modal-window" onclick="event.stopPropagation()">
+            <div class="modal-close-header">
+                <span style="font-weight:800; text-transform:uppercase; font-size:11px; color:var(--primary-gold); letter-spacing:1px;">Active Core Framework</span>
+                <button class="modal-close-btn" onclick="closeFrameworkModal()">&times; Close Framework</button>
+            </div>
+            <div id="modal-content-injector"></div>
+        </div>
+    </div>
+
+    <!-- CENTRAL FOOTER HARD-CODED DIRECTORY HUB -->
+    <div class="footer-hub">
+        <div class="directory-box">
+            <div class="directory-branding">
+                <h2>Durga Psychiatric Centre</h2>
+                <p>International Advisory Platform for Advanced Relationship Architecture, Workplace Emotional Intelligence &amp; Multi-Stage Soft Skills Panels</p>
+            </div>
+
+            <div class="link-grid-stack">
+                <!-- MASTER CROSS LINK -->
+                <a href="https://durga-mindskillscare.pages.dev/" target="_blank" class="link-element master-element">
+                    <span>⚡ SYSTEM MASTER PLATFORM: Durga MindSkills Care Central Portal</span>
+                    <span class="arrow-icon">&rarr;</span>
+                </a>
+
+                <!-- PLATFORM MODULES -->
+                <a href="https://durga-mindskillscare.pages.dev/workshops.html" target="_blank" class="link-element">
+                    <span>🤝 Relational Training Panels &amp; Marital Alignment Workshops</span>
+                    <span class="arrow-icon">&rarr;</span>
+                </a>
+                <a href="https://durga-mindskillscare.pages.dev/ai-test.html" target="_blank" class="link-element">
+                    <span>🧠 Interactive Framework: Online AI Diagnostic Testing Suite</span>
+                    <span class="arrow-icon">&rarr;</span>
+                </a>
+                <a href="https://durga-mindskillscare.pages.dev/about.html" target="_blank" class="link-element">
+                    <span>📋 Executive Profile &amp; Methodology Matrix: Dr. D. Durga</span>
+                    <span class="arrow-icon">&rarr;</span>
+                </a>
+                <a href="https://durga-mindskillscare.pages.dev/contact.html" target="_blank" class="link-element">
+                    <span>📞 Private Consultation Booking Desk &amp; Intake Coordination</span>
+                    <span class="arrow-icon">&rarr;</span>
+                </a>
+
+                <!-- TARGET GEOLOCATION STRATEGY CHANNELS -->
+                <div class="seo-divider">🎯 Primary Local Authority Nodes</div>
+                
+                <a href="https://durga-mindskillscare.pages.dev/best-psychologist-in-chennai.html" target="_blank" class="link-element geo-element">
+                    <span>📍 Premium Corporate Alignment Desk: Best Psychologist in Chennai</span>
+                    <span class="arrow-icon">&rarr;</span>
+                </a>
+                <a href="https://durga-mindskillscare.pages.dev/anxiety-treatment-chennai.html" target="_blank" class="link-element geo-element">
+                    <span>📍 Performance Diagnostics: Attention Fatigue &amp; Anxiety Management Chennai</span>
+                    <span class="arrow-icon">&rarr;</span>
+                </a>
+                <a href="https://durga-mindskillscare.pages.dev/depression-counselling-chennai.html" target="_blank" class="link-element geo-element">
+                    <span>📍 Adaptive Mindset Panels: Executive Burnout &amp; Counselling Chennai</span>
+                    <span class="arrow-icon">&rarr;</span>
+                </a>
+
+                <!-- SECONDARY NETWORK ENTRY -->
+                <div class="seo-divider">✍️ Core Feed Syndication</div>
+                <a href="https://durgapsychiatric.blogspot.com/" target="_blank" class="link-element syndication-banner">
+                    <span>🌐 Live Publishing Broadcast: Dr. D. Durga Blogger Platform</span>
+                    <span class="arrow-icon">&rarr;</span>
+                </a>
+            </div>
+
+            <!-- REGULATORY SEAL -->
+            <div class="final-copyright-seal">
+                &copy; 2026 Durga Psychiatric Centre Network. Operational Boundary Disclosure: Focus lies strictly within preventative training, corporate soft skills, and wellness advisory. Severely acute clinical instances are methodically routed to trusted external medical environments. All rights reserved.
+            </div>
+        </div>
+    </div>
+
+    <!-- INTERACTIVE JSONP EXTRACTION & OVERLAY ENGINE -->
+    <script>
+        let localSyndicatedPostsMemory = [];
+
+        function parseBloggerFeed(json) {
+            const container = document.getElementById('dynamic-posts-container');
+            const entries = json.feed.entry || [];
+            
+            if (entries.length === 0) {
+                container.innerHTML = '<div class="shimmer-loader">No syndicated modules detected on the source server.</div>';
+                return;
+            }
+
+            let gridHtml = '<div class="posts-grid">';
+
+            for (let i = 0; i < entries.length; i++) {
+                const entry = entries[i];
+                const title = entry.title.$t;
+                
+                let fullHtmlPayload = '';
+                if (entry.content && entry.content.$t) {
+                    fullHtmlPayload = entry.content.$t; 
+                } else if (entry.summary && entry.summary.$t) {
+                    fullHtmlPayload = entry.summary.$t;
+                }
+
+                localSyndicatedPostsMemory.push({
+                    title: title,
+                    body: fullHtmlPayload
+                });
+
+                let previewSnippet = fullHtmlPayload.replace(/<[^>]*>/g, ''); 
+                if (previewSnippet.length > 130) {
+                    previewSnippet = previewSnippet.substring(0, 130) + '...';
+                }
+
+                gridHtml += `
+                    <div class="award-card" onclick="launchFrameworkReader(${i})">
+                        <div>
+                            <div class="card-tag">Corporate Core Frame</div>
+                            <h3 class="card-title">${title}</h3>
+                            <p class="card-snippet">${previewSnippet}</p>
+                        </div>
+                        <div class="card-action-btn">
+                            Read Full Framework &rarr;
+                        </div>
+                    </div>
+                `;
+            }
+
+            gridHtml += '</div>';
+            container.innerHTML = gridHtml;
+        }
+
+        function launchFrameworkReader(index) {
+            const structuralTargetRecord = localSyndicatedPostsMemory[index];
+            if(!structuralTargetRecord) return;
+
+            document.getElementById('modal-content-injector').innerHTML = `
+                <h2 style="font-size: 24px; margin-bottom: 25px; line-height: 1.3; font-weight: 800; color: var(--text-white); letter-spacing: -0.5px;">
+                    ${structuralTargetRecord.title}
+                </h2>
+                <div class="blog-full-body">
+                    ${structuralTargetRecord.body}
+                </div>
+            `;
+            
+            document.getElementById('premium-reader-modal').classList.add('active');
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function closeFrameworkModal() {
+            document.getElementById('premium-reader-modal').classList.remove('active');
+            document.body.style.overflow = 'auto'; 
+        }
+    </script>
+    
+    <script src="https://durgapsychiatric.blogspot.com/feeds/posts/default?alt=json-in-script&callback=parseBloggerFeed&max-results=50"></script>
+</body>
+</html>
